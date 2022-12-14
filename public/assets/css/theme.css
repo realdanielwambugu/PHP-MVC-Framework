@@ -1,43 +1,40 @@
 /* Theme default style */
 :root {
   /* define app major colors */
-  --primaryColor: rgb(115, 128, 236);
-  --secondaryColor: rgb(47, 46, 62);
+  --primaryColor: rgb(119, 142, 227);
+  --secondaryColor: rgb(44, 47, 51);
 
   /* alert colors */
-  ---color-danger: #ff7782;
-  ---color-warning: #ffbb55;
-  ---color-success: #41f1b6;
+  --color-danger: #ff7782;
+  --color-warning: #ffbb55;
+  --color-success: #41f1b6;
 
-  ---color-light: rgb(132, 139, 200, 0.18);
-  ---color-dark: #363949;
-
-  ---color-info-light: #7d8da1;
-  ---color-info-dark: #dce1eb;
+  --color-dark: #363949;
+  --color-light: #dce1eb;
 
   /* app additional colors */
   --customColor-1: rgb(255, 255, 255);
-  --customColor-2: rgb(246, 246, 249);
+  --customColor-2: rgb(35, 39, 42);
   --customColor-3: rgb(103, 116, 131);
 
   /* pri sec color opacity */
-  --primaryColor-100: rgb(115, 128, 236, 0.1);
-  --primaryColor-200: rgb(115, 128, 236, 0.2);
-  --primaryColor-300: rgb(115, 128, 236, 0.3);
-  --primaryColor-400: rgb(115, 128, 236, 0.4);
-  --primaryColor-500: rgb(115, 128, 236, 0.5);
-  --primaryColor-600: rgb(115, 128, 236, 0.6);
-  --primaryColor-700: rgb(115, 128, 236, 0.7);
-  --primaryColor-800: rgb(115, 128, 236, 0.8);
+  --primaryColor-100: rgb(119, 142, 227, 0.1);
+  --primaryColor-200: rgb(119, 142, 227, 0.2);
+  --primaryColor-300: rgb(119, 142, 227, 0.3);
+  --primaryColor-400: rgb(119, 142, 227, 0.4);
+  --primaryColor-500: rgb(119, 142, 227, 0.5);
+  --primaryColor-600: rgb(119, 142, 227, 0.6);
+  --primaryColor-700: rgb(119, 142, 227, 0.7);
+  --primaryColor-800: rgb(119, 142, 227, 0.8);
 
-  --secondaryColor-100: rgb(47, 46, 62, 0.1);
-  --secondaryColor-200: rgb(47, 46, 62, 0.2);
-  --secondaryColor-300: rgb(47, 46, 62, 0.3);
-  --secondaryColor-400: rgb(47, 46, 62, 0.4);
-  --secondaryColor-500: rgb(47, 46, 62, 0.5);
-  --secondaryColor-600: rgb(47, 46, 62, 0.6);
-  --secondaryColor-700: rgb(47, 46, 62, 0.7);
-  --secondaryColor-800: rgb(47, 46, 62, 0.8);
+  --secondaryColor-100: rgb(44, 47, 51, 0.1);
+  --secondaryColor-200: rgb(44, 47, 51, 0.2);
+  --secondaryColor-300: rgb(44, 47, 51, 0.3);
+  --secondaryColor-400: rgb(44, 47, 51, 0.4);
+  --secondaryColor-500: rgb(44, 47, 51, 0.5);
+  --secondaryColor-600: rgb(44, 47, 51, 0.6);
+  --secondaryColor-700: rgb(44, 47, 51, 0.7);
+  --secondaryColor-800: rgb(44, 47, 51, 0.8);
 
   /* custom colors opacity */
   --customColor-1-100: rgb(255, 255, 255, 0.1);
@@ -49,14 +46,14 @@
   --customColor-1-700: rgb(255, 255, 255, 0.7);
   --customColor-1-800: rgb(255, 255, 255, 0.8);
 
-  --customColor-2-100: rgb(246, 246, 249, 0.1);
-  --customColor-2-200: rgb(246, 246, 249, 0.2);
-  --customColor-2-300: rgb(246, 246, 249, 0.3);
-  --customColor-2-400: rgb(246, 246, 249, 0.4);
-  --customColor-2-500: rgb(246, 246, 249, 0.5);
-  --customColor-2-600: rgb(246, 246, 249, 0.6);
-  --customColor-2-700: rgb(246, 246, 249, 0.7);
-  --customColor-2-800: rgb(246, 246, 249, 0.8);
+  --customColor-2-100: rgb(35, 39, 42, 0.1);
+  --customColor-2-200: rgb(35, 39, 42, 0.2);
+  --customColor-2-300: rgb(35, 39, 42, 0.3);
+  --customColor-2-400: rgb(35, 39, 42, 0.4);
+  --customColor-2-500: rgb(35, 39, 42, 0.5);
+  --customColor-2-600: rgb(35, 39, 42, 0.6);
+  --customColor-2-700: rgb(35, 39, 42, 0.7);
+  --customColor-2-800: rgb(35, 39, 42, 0.8);
 
   --customColor-3-100: rgb(103, 116, 131, 0.1);
   --customColor-3-200: rgb(103, 116, 131, 0.2);
@@ -95,54 +92,53 @@ html {
   font-size: 14px;
 }
 
+input {
+  background-color: inherit;
+  color: inherit;
+}
+
+/* Dark theme */
 body {
-  background: var(--customColor-2);
-  width: 100vw;
-  height: 100vh;
+  background-color: var(--customColor-2);
+  color: var(--color-light);
+  min-height: 100vh;
   font-family: var(--primaryFontFamily);
-  font-size: 0.88rem;
-  user-select: none;
-  overflow-x: hidden;
 }
 
-a {
-  color: var(---color-dark);
+.sec-theme-color {
+  background-color: var(--secondaryColor);
+  background-color: var(--secondaryColor-600);
 }
 
-img {
-  display: block;
-  width: 100%;
+.hoverColor-sec:hover {
+  background-color: var(--secondaryColor-600);
+
 }
 
-h1 {
-  font-weight: 800;
-  font-size: 1.8rem;
+.fixed {
+  background-color: var(--customColor-2);
 }
 
-h2 {
-  font-size: 1.4rem;
+
+/* Light Theme Colors */
+
+body {
+  background-color: var(--customColor-1);
+  color: var(--color-dark);
+  min-height: 100vh;
+  font-family: var(--primaryFontFamily);
 }
 
-h3 {
-  font-size: 0.87rem;
+.sec-theme-color {
+  background-color: var(--customColor-1);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-h4 {
-  font-size: 0.8rem;
+.hoverColor-sec:hover {
+  background-color: var(--customColor-1-500);
+
 }
 
-h2 {
-  font-size: 0.77rem;
-}
-
-small {
-  font-size: 0.75rem;
-}
-
-text-muted {
-  color: var(---color-info-dark);
-}
-
-b {
-  color: var(---color-dark);
+.fixed {
+  background-color: var(--customColor-1);
 }

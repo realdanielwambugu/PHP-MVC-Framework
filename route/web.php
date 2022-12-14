@@ -2,15 +2,15 @@
 
 use Xcholars\Support\Proxies\Route;
 
+use Xcholars\Support\Proxies\Auth;
+
 use Xcholars\Support\Proxies\RouteGroup as Group;
 
 use Xcholars\Http\Request;
 
 use Xcholars\Http\Response;
 
-Route::view('/', 'home');
-
-Route::get('/home', 'HomeController@show');
+Route::get('/', 'HomeController@show');
 
 Group::middleware('guest')->members(function ()
 {
@@ -40,13 +40,26 @@ Group::middleware('guest')->members(function ()
     Route::post('/resetPassword', 'ResetPasswordController@reset');
 });
 
-Group::middleware('auth')->members(function ()
-{
+// Group::middleware('auth')->members(function ()
+// {
+    Route::get('/home', 'HomeController@show');
+    
+    Route::post('/analytics', 'HomeController@show');
+
+    Route::post('/motorcycles', 'MotorcyclesController@show');
+
+    // customers
+    Route::post('/customers', 'ProfileController@show');
+
+    Route::post('/edit_profile', 'ProfileController@edit');
+
+    
+
     // sign Out
     Route::get('/logout', 'LogoutController@logout');
 
     Route::post('/logout', 'LogoutController@logout');
-});
+// });
 
 Route::fallback(function (Response $response)
 {

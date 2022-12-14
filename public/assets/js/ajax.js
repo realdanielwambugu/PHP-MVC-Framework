@@ -60,13 +60,17 @@ class Ajax
         return this;
     }
 
-    loader(area, icon = null)
+    loader(area, type= null, icon = null)
     {
         this.loaderArea = area;
 
         this.prev = $('#' + area).html();
-
-        this.icon = icon ? icon : '<i class="fa fa-thin fa-spinner" aria-hidden="true"></i>';
+        if (type === null)
+        {
+            this.icon = icon ? icon : '<i class="fa fa-thin fa-spinner" aria-hidden="true"></i>';
+        } else {
+            this.icon = icon ? icon : `<i class="fa fa-thin fa-spinner" aria-hidden="true"></i>`;
+        }
 
         return this;
     }
@@ -149,6 +153,7 @@ class Ajax
         }
 
         $('#' + ajax.contentArea).html(data);
+        
+        AfterAjax(this.action);
     }
-
 }

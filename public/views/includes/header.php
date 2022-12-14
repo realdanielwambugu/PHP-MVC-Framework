@@ -24,5 +24,6 @@
         <!----------------------------CDN------------------------------->
         <!-- Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.2/css/all.css">
+
     </head>
