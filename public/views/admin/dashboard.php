@@ -12,7 +12,7 @@
                 </h1>
             </div>
 
-            <menu class="mt-6 fx fx-c fx-j-btw" style="width:200px; height:calc(100% - 90px)">
+            <menu class="mt-6 fx fx-c fx-j-btw" style="width:200px; height:calc(100% - 80px)">
                 <ul id="nav-list" class="list-none">
                     <li onclick="(new Ajax).route('analytics').container('content').
                     loader('content', 'shine').send()" class="nav-item active">
@@ -71,7 +71,7 @@
                          hover:color-pri">
                          <span class="w-16 h-full fx fx-j-c fx-i-c"
                         style="font-size:20px;"> 
-                        <!-- <i class="fas fa-user"></i> -->
+                        
                         <div class="fx fx-i-c fx-j-c w-8 h-8 p-1 bgColor-pri rounded-full">
                             <img src="<?= images_path('users/1.jpg') ?>" alt="admin pic"
                               class="w-full rounded-full cover">
@@ -80,13 +80,31 @@
                     </div></li>
 
                     <li onclick="" class="nav-item">
-                    <div class="pointer fx h-16 fx-i-c fw-400 fs-lg 
+                    <div class="pointer fx h-16 fx-i-c fw-400 fs-lg  
                          hover:color-pri">
-                         <span class="w-16 h-full fx fx-j-c fx-i-c"
+                         <span class="w-16 h-full fx fx-j-c fx-i-c bgColor-"
                         style="font-size:20px;"> 
                         <i class="fas fa-sign-out"></i>
                         </span> <span class="linkName"> Logout </span>
                     </div></li>
+
+                    <li onclick="" class="nav-item mt-4">
+                    <div class="pointer fx h-16 fx-i-c fw-400 fs-lg 
+                         hover:color-pri">
+                         <div class="w-16 h-full fx fx-j-c fx-i-c bgColor-"
+                        style="font-size:20px;"> 
+                            <input type="checkbox" class="checkbox hide" id="checkbox">
+                            <label for="checkbox" class="w-10 h-20 sec-theme-color  
+                            rounded-full relative fx fx-c fx-j-btw fx-i-c py-2 theme_switch_label">
+                              <i id="sun" class='fa fa-sun color-1 mt-2'></i>
+                              <i id="moon" class="fa fa-moon color-dark"></i>
+                              <span class='w-8 h-8 rounded-full bgColor-pri absolute 
+                              theme_switch_ball'></span>
+                            </label>
+                          </div> 
+                            
+                    </div></li>
+
                 </ul>
             </menu>
        </nav>
@@ -129,6 +147,7 @@
 
                 </div>
             </main>
+         
 
             <?php require_once view('admin/includes/footer'); ?>
 

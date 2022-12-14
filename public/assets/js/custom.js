@@ -51,4 +51,49 @@ for (var i = 0; i < btns.length; i++) {
 // Get a reference to the file input element on the page
 var fileInput = document.getElementById('fileInput');
 
-// Make sure the element exists before trying to use it
+// Theme switch js
+
+const checkbox = document.getElementById('checkbox');
+let theme = localStorage.getItem('theme');
+
+
+var dark = config().host + '/public/assets/css/themes/dark_theme.css';
+var light = config().host + '/public/assets/css/themes/light_theme.css';
+
+if (theme)
+{
+  document.getElementById("theme").href = theme;
+  
+  if (theme === dark)
+  { 
+    sun = document.querySelector('#sun');
+    sun.classList.replace('fa-sun', 'fa-moon');
+    sun.classList.replace('color-1', 'color-dark');
+      
+    moon = document.querySelector('#moon');
+    moon.classList.replace('fa-moon', 'fa-sun');
+    moon.classList.replace( 'color-dark','color-1');
+  
+  }
+
+}
+
+checkbox.addEventListener('change', () => {
+
+  var dark = config().host + '/public/assets/css/themes/dark_theme.css';
+  var light = config().host + '/public/assets/css/themes/light_theme.css';
+   
+  var theme = document.getElementById("theme");
+
+  if (theme.href === light)
+  {
+    theme.href = dark;
+    localStorage.setItem('theme', dark);
+  }
+  else
+  {
+    theme.href = light;
+    localStorage.setItem('theme', light);
+  }
+
+});

@@ -35,3 +35,21 @@ nav.close~.dashboard .top {
     left: 95px;
     width: calc(100% - 95px);
 }
+
+/* Theme switch css */
+
+/* The container for the switch */
+
+.theme_switch_label {
+    transform: scale(1);
+}
+
+.theme_switch_ball {
+    /* position: absolute; */
+    transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked+.theme_switch_label .theme_switch_ball {
+    transform: translatey(35px);
+}

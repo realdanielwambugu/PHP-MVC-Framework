@@ -10,9 +10,10 @@
 
         <!-- TITLE  -->
         <title> <?= app_name(); ?> </title>
-
+      
         <!----------------------------Styles(CSS)---------------------->
         <link rel="stylesheet" href="<?= css_path('style.css'); ?>">
+        <link id="theme" rel="stylesheet" href="<?= css_path('themes\light_theme.css'); ?>">
 
         <!---------------------------PACKAGES-------------------------->
         <!-- Jquery -->

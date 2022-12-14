@@ -1,0 +1,20 @@
+body {
+    background-color: var(--customColor-1);
+    color: var(--color-dark);
+    min-height: 100vh;
+    font-family: var(--primaryFontFamily);
+}
+
+.sec-theme-color {
+    background-color: var(--customColor-1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.hoverColor-sec:hover {
+    background-color: var(--customColor-1-500);
+
+}
+
+.fixed {
+    background-color: var(--customColor-1);
+}
