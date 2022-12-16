@@ -1,6 +1,8 @@
 // This function acts as a callback. It is called after the AJAX class request is complete.
 function AfterAjax(action)
 {
+// -----use the FileReader object to preview an image:----
+// Get a reference to the file input element on the page
 
   if (action === 'edit_profile')
   {
@@ -47,9 +49,6 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-// -----use the FileReader object to preview an image:----
-// Get a reference to the file input element on the page
-var fileInput = document.getElementById('fileInput');
 
 // Theme switch js
 
