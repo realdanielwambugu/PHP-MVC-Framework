@@ -40,26 +40,14 @@ Group::middleware('guest')->members(function ()
     Route::post('/resetPassword', 'ResetPasswordController@reset');
 });
 
-// Group::middleware('auth')->members(function ()
-// {
-    Route::get('/home', 'HomeController@show');
-    
-    Route::post('/analytics', 'HomeController@show');
-
-    Route::post('/motorcycles', 'MotorcyclesController@show');
-
-    // customers
-    Route::post('/customers', 'ProfileController@show');
-
-    Route::post('/edit_profile', 'ProfileController@edit');
-
-    
-
+Group::middleware('auth')->members(function ()
+{
+ 
     // sign Out
     Route::get('/logout', 'LogoutController@logout');
 
     Route::post('/logout', 'LogoutController@logout');
-// });
+});
 
 Route::fallback(function (Response $response)
 {
